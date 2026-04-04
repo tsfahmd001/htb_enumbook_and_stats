@@ -7,3 +7,6 @@
 # Tier-1
 ![appointment](logos/appointment.png)   ![sequel](logos/sequel.png)   ![crocodile](logos/crocodile.png)   ![responder](logos/responder.png)   
 ![three](logos/three.png)   
+
+# Tier-2
+![archetype](logos/archetype.png)

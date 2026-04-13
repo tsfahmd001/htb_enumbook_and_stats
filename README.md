@@ -4,7 +4,7 @@
 ![facts](logos/facts.png)
 
 # Retired Machnes
-<!-- ![cap](logos/cap.png) --> 'Cap' in-progress
+![cap](logos/cap.png)
 
 
 # Starting Point

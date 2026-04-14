@@ -17,7 +17,7 @@ Status      : Retired
 $ nmap -Pn -sS -sV -sC 10.xx.xx.xx 
 Starting Nmap 7.98 ( https://nmap.org ) at 2026-04-09 15:31 +0530
 Stats: 0:00:11 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
-Nmap scan report for 10.129.26.192
+Nmap scan report for 10.xx.xx.xx
 Host is up (0.22s latency).
 Not shown: 997 closed tcp ports (reset)
 PORT   STATE SERVICE VERSION
@@ -51,7 +51,7 @@ PORT 80 - HTTP Gunicorn
 IDOR
 
 Key Commands:
-$ ffuf -w 1000.txt -u http://10.129.29.69/data/FUZZ -mc 200 -c -v
+$ ffuf -w 1000.txt -u http://10.xx.xx.xx/data/FUZZ -mc 200 -c -v
 
         /\___\  /\___\           /\___\       
        /\ \__/ /\ \__/  __  __  /\ \__/     
@@ -64,7 +64,7 @@ $ ffuf -w 1000.txt -u http://10.129.29.69/data/FUZZ -mc 200 -c -v
 ________________________________________________
 
  :: Method           : GET
- :: URL              : http://10.129.29.69/data/FUZZ
+ :: URL              : http://10.xx.xx.xx/data/FUZZ
  :: Wordlist         : FUZZ: /home/tsfahmd01/1000.txt
  :: Follow redirects : false
  :: Calibration      : false
@@ -74,15 +74,15 @@ ________________________________________________
 ________________________________________________
 
 [Status: 200, Size: 17144, Words: 7066, Lines: 371, Duration: 240ms]
-| URL | http://10.129.29.69/data/1
+| URL | http://10.xx.xx.xx/data/1
     * FUZZ: 1
 
 [Status: 200, Size: 17144, Words: 7066, Lines: 371, Duration: 253ms]
-| URL | http://10.129.29.69/data/2
+| URL | http://10.xx.xx.xx/data/2
     * FUZZ: 2
 
 [Status: 200, Size: 17147, Words: 7066, Lines: 371, Duration: 240ms]
-| URL | http://10.129.29.69/data/0
+| URL | http://10.xx.xx.xx/data/0
     * FUZZ: 0
 
 :: Progress: [1001/1001] :: Job [1/1] :: 153 req/sec :: Duration: [0:00:06] :: Errors: 0 ::

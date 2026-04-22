@@ -1,7 +1,7 @@
 # Machines Pwned
 
 # Season 10 - Season of the Underground
-![facts](logos/facts.png)
+![facts](logos/facts.png)   ![silentium](logos/silentium.png)
 
 # Retired Machnes
 ![cap](logos/cap.png)
